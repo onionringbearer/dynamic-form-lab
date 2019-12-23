@@ -1,8 +1,4 @@
-<form
-  class="dynamic-form row"
-  [formGroup]="form"
-  (submit)="handleSubmit($event)"
->
+<form class="dynamic-form row" [formGroup]="form" (submit)="handleSubmit($event)">
   <div class="col-md-{{ field.gridSize }}" *ngFor="let field of config">
     <ng-container dynamicField [config]="field" [group]="form"> </ng-container>
   </div>

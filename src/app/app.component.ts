@@ -1,8 +1,8 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { Validators } from '@angular/forms';
+import {Component, ViewChild, AfterViewInit} from '@angular/core';
+import {Validators} from '@angular/forms';
 
-import { FieldConfig } from './dynamic-form/models/field-config.interface';
-import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dynamic-form.component';
+import {FieldConfig} from './dynamic-form/models/field-config.interface';
+import {DynamicFormComponent} from './dynamic-form/containers/dynamic-form/dynamic-form.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dyn
   templateUrl: './app.component.html'
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild(DynamicFormComponent, { static: true }) form: DynamicFormComponent;
+  @ViewChild(DynamicFormComponent, {static: true}) form: DynamicFormComponent;
 
   config: FieldConfig[] = [
     {
@@ -53,7 +53,7 @@ export class AppComponent implements AfterViewInit {
       label: 'Submit',
       name: 'submit',
       type: 'button',
-      gridSize: 2
+      gridSize: 0
     }
   ];
 
@@ -69,7 +69,7 @@ export class AppComponent implements AfterViewInit {
     this.form.setDisabled('submit', true);
   }
 
-  submit(value: { [name: string]: any }) {
+  submit(value: {[name: string]: any}) {
     console.log(value);
   }
 }
